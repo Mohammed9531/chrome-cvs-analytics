@@ -1,0 +1,43 @@
+{
+	"manifest_version": 1,
+	"name": "CVS Analytics Monitor",
+	"version": "1",
+	"description": "Your very own analytics monitor that enables consolidated tags view.",
+	"devtools_page": "index.html",
+	"icons": {
+		"16": "assets/images/icon16.png",
+		"24": "assets/images/icon24.png",
+		"32": "assets/images/icon32.png",
+		"48": "assets/images/icon48.png",
+		"96": "assets/images/icon96.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "assets/images/icon16.png",
+			"24": "assets/images/icon24.png",
+			"32": "assets/images/icon32.png",
+			"48": "assets/images/icon48.png",
+			"96": "assets/images/icon96.png"
+		},
+		"default_title": "CVS Analytics Monitor"
+	},
+	"permissions": [
+		"<all_urls>",
+        "webRequest",
+        "webNavigation"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["./*.js"]
+		}
+	],
+	"background": {
+		"scripts": [
+			"./background.js"
+		]
+	},
+	"commands": {}
+}
